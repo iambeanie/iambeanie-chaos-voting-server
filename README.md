@@ -41,6 +41,10 @@ Open your routers configuration software, usually found by going to the ip addre
 
 Why: We want any communication coming into your network on port 6970 and 6971 to come to your computer, where the server is hosted. Without this step, communication coming those ports will stop at the router.
 
+#### Open ports on windows firewall
+
+Open up ports 6970 and 6971 for incoming connections in the windows firewall, both TCP and UDP.
+
 ### Option 2: Hosting on a Server
 
   1. Obtain a DNS record for the chosen URL
@@ -128,5 +132,7 @@ TLDR: The chaos mod tells the intermediary to tell the server to tell the client
 
 
 * Not really, can get away with much less
+
 ** Doesn't have to be port 6970, can realistically be anything but 6970 is unused from my experience
+
 *** I'm not proficient with C++ anymore, i've used file writing / reading as the easiest way to move back into C# land, where i am far more familiar. This could easily be done with a websocket in C++ but for the life of me, i can never get anything to build. The API generates a swagger json file and i've actually managed to make it create a C++ client but cannot get it to build.
