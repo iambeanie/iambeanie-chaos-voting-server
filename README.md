@@ -58,15 +58,39 @@ Why: We want any communication coming into your network on port 6970 and 6971 to
 7. If you're server hosting, put it to https and select the installed SSL Certificate
 8. Voting API is now running
 9. Right click on sites -> Add new Website
-10. Give it any name really 'Chaos UI' will do
-11. If you're self hosting, give it port 6971
-12. If you're server hosting, put it to https and select the installed SSL Certificate
+10. Point it to the folder 'VotingUI'
+11. Give it any name really 'Chaos UI' will do
+12. If you're self hosting, give it port 6971
+13. If you're server hosting, put it to https and select the installed SSL Certificate
 
 The server should now be hosted.
 
 For self hosted solutions, grab your external IP address (note: different to the internal one) from any IP revealing site (eg: ipchicken or whatsmyip). On a different computer go to that ip address by typing the following into a browser: http://YOUR-IP-ADDRESS:6970 for the API and http://YOUR-IP-ADDRESS:6971 for the UI. The API should return a 404, this means it is successful and the UI should show something.
 
 For server hosting solutions, visit the URL denoted in the DNS entries.
+
+### Configure the hosted UI
+
+Open the folder where you've put the VotingUI, open up appSettings.js in notepad or similar. Replace the api url with the domain address:
+
+Self Hosted: if your API's address is 'http://187.251.45.10:6970/' then you should put '187.251.45.10:6970' in the file.
+Server Hosting: if your API's address is 'https://google.com.au/' then you should put 'google.com.au'.
+Note: no trailing slashes
+
+Restart IIS by running 'iisreset' in an admin command prompt.
+
+
+# Setting up the client
+
+Download the files from this github.
+
+Open the folder 'Put Anywhere and run ChaosClientIntermediary exe', open the file appsettings.json.
+
+Same as under 'Configure the Hosted UI', put the URL of the API here and save. Run the ChaosClientIntermediary.exe, it will show that it's monitoring file changes and connected to the voting server if it worked.
+
+Copy the contents of the 'Put Contents in GTAV Folder' into the root of your GTAV folder. Open up the chaosmod folder, run the configapp.exe and click save. The config app is separate so that new versions of the app don't overwrite your existing config.
+
+
 
 
 # How the server works
