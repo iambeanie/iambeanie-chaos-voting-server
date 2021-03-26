@@ -77,8 +77,8 @@ For server hosting solutions, visit the URL denoted in the DNS entries.
 
 Open the folder where you've put the VotingUI, open up appSettings.js in notepad or similar. Replace the api url with the domain address:
 
-Self Hosted: if your API's address is 'http://187.251.45.10:6970/' then you should put '187.251.45.10:6970' in the file.
-Server Hosting: if your API's address is 'https://google.com.au/' then you should put 'google.com.au'.
+Self Hosted: if your API's address is 'http://187.251.45.10:6970/' then you should put '187.251.45.10:6970' in the file. Set useHTTPS to false.
+Server Hosting: if your API's address is 'https://google.com.au/' then you should put 'google.com.au'. Set useHTTPS to true
 Note: no trailing slashes
 
 Restart IIS by running 'iisreset' in an admin command prompt.
@@ -90,7 +90,7 @@ Download the files from this github.
 
 Open the folder 'Put Anywhere and run ChaosClientIntermediary exe', open the file appsettings.json.
 
-Same as under 'Configure the Hosted UI', put the URL of the API here and save. Run the ChaosClientIntermediary.exe, it will show that it's monitoring file changes and connected to the voting server if it worked.
+Same as under 'Configure the Hosted UI', put the URL of the API here, set useHTTPS and save. Run the ChaosClientIntermediary.exe, it will show that it's monitoring file changes and connected to the voting server if it worked.
 
 Copy the contents of the 'Put Contents in GTAV Folder' into the root of your GTAV folder. Open up the chaosmod folder, run the configapp.exe and click save. The config app is separate so that new versions of the app don't overwrite your existing config.
 
