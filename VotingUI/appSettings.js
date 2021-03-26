@@ -1,5 +1,6 @@
 window.settings = window.settings || {};
 
 window.settings = {
-  webApiServer: "put-api-url-here"
+  webApiServer: "put-api-domain-here",
+  useHTTPS: false
 };
